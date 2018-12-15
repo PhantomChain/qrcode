@@ -2,11 +2,11 @@ import { Component, Prop, Watch, State, Method, Element } from '@stencil/core';
 import QRious from 'qrious';
 
 @Component({
-  tag: 'ark-qrcode',
-  styleUrl: 'ark-qrcode.scss',
+  tag: 'phantom-qrcode',
+  styleUrl: 'phantom-qrcode.scss',
   shadow: true
 })
-export class ArkQRCode {
+export class PhantomQRCode {
   @Element() element: Element;
 
   @Prop({ mutable: true }) address: string;
@@ -23,7 +23,7 @@ export class ArkQRCode {
     const pattern = /^[AaDd]{1}[0-9a-zA-Z]{33}$/g;
 
     if (!this.address) throw new Error('address: required');
-    if (this.address && !this.address.match(pattern)) throw new Error('address: not valid ark recipient');
+    if (this.address && !this.address.match(pattern)) throw new Error('address: not valid phantom recipient');
   }
 
   @Watch('amount')
@@ -90,7 +90,7 @@ export class ArkQRCode {
 
   @Method()
   validateURI(uri: string) {
-    const regex = new RegExp(/^(?:ark:)([AaDd]{1}[0-9a-zA-Z]{33})([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*)$/);
+    const regex = new RegExp(/^(?:xph:)([AaDd]{1}[0-9a-zA-Z]{33})([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*)$/);
 
     if (regex.test(uri)) return regex.exec(uri)
   }
@@ -111,7 +111,7 @@ export class ArkQRCode {
 
   generateSchema(): string {
     const params = this.formatParams();
-    const uri = `ark:${this.address}${params}`;
+    const uri = `xph:${this.address}${params}`;
 
     const scheme = JSON.parse(JSON.stringify(uri));
 

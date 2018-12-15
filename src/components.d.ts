@@ -28,7 +28,7 @@ import {
 } from '@stencil/core';
 
 declare global {
-  interface HTMLArkQrcodeElement extends HTMLStencilElement {
+  interface HTMLPhantomQrcodeElement extends HTMLStencilElement {
     'address': string;
     'amount': number;
     'deserializeURI': (uri: string) => { address: any; amount: any; label: any; vendorField: any; };
@@ -41,23 +41,23 @@ declare global {
     'validateURI': (uri: string) => RegExpExecArray;
     'vendorField': string;
   }
-  var HTMLArkQrcodeElement: {
-    prototype: HTMLArkQrcodeElement;
-    new (): HTMLArkQrcodeElement;
+  var HTMLPhantomQrcodeElement: {
+    prototype: HTMLPhantomQrcodeElement;
+    new (): HTMLPhantomQrcodeElement;
   };
   interface HTMLElementTagNameMap {
-    'ark-qrcode': HTMLArkQrcodeElement;
+    'phantom-qrcode': HTMLPhantomQrcodeElement;
   }
   interface ElementTagNameMap {
-    'ark-qrcode': HTMLArkQrcodeElement;
+    'phantom-qrcode': HTMLPhantomQrcodeElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'ark-qrcode': JSXElements.ArkQrcodeAttributes;
+      'phantom-qrcode': JSXElements.PhantomQrcodeAttributes;
     }
   }
   namespace JSXElements {
-    export interface ArkQrcodeAttributes extends HTMLAttributes {
+    export interface PhantomQrcodeAttributes extends HTMLAttributes {
       'address'?: string;
       'amount'?: number;
       'label'?: string;

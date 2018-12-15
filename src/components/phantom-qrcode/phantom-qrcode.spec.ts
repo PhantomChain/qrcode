@@ -1,9 +1,9 @@
 import { TestWindow } from '@stencil/core/testing';
-import { ArkQRCode } from './ark-qrcode';
+import { PhantomQRCode } from './phantom-qrcode';
 
-describe('ark-qrcode', () => {
+describe('phantom-qrcode', () => {
   it('should build', () => {
-    expect(new ArkQRCode()).toBeTruthy();
+    expect(new PhantomQRCode()).toBeTruthy();
   });
 
   describe('rendering', () => {
@@ -13,8 +13,8 @@ describe('ark-qrcode', () => {
     beforeEach(async () => {
       window = new TestWindow();
       element = await window.load({
-        components: [ArkQRCode],
-        html: '<ark-qrcode></ark-qrcode>'
+        components: [PhantomQRCode],
+        html: '<phantom-qrcode></phantom-qrcode>'
       });
     });
 
@@ -33,7 +33,7 @@ describe('ark-qrcode', () => {
     });
 
     it('should work vendor-field with special characters', async () => {
-      element.vendorField = 'Hello%20Ark!';
+      element.vendorField = 'Hello%20Phantom!';
       await window.flush();
     });
 
