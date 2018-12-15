@@ -1,14 +1,14 @@
 {
-  "name": "ark-qrcode",
+  "name": "phantom-qrcode",
   "version": "0.0.7",
-  "description": "A web component to generate QR codes for ARK payments.",
-  "main": "dist/arkqrcode.js",
+  "description": "A web component to generate QR codes for XPH payments.",
+  "main": "dist/phantomqrcode.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
-  "browser": "dist/arkqrcode.js",
+  "browser": "dist/phantomqrcode.js",
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
@@ -30,14 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luciorubeens/ark-qrcode.git"
+    "url": "git+https://github.com/phantomchain/qrcode.git"
   },
   "author": "Lúcio Rubens <lucio@ark.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luciorubeens/ark-qrcode"
+    "url": "https://github.com/phantomchain/qrcode"
   },
-  "homepage": "https://github.com/luciorubeens/ark-qrcode",
+  "homepage": "https://github.com/phantomchain/qrcode",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
