@@ -42,7 +42,7 @@ Insert the element in your code and enter your custom properties:
 
 Generate this QR code:
 
-<img src="https://i.imgur.com/hgi9WcP.png" width="15%">
+<img src="https://i.imgur.com/I3plyBR.png" width="150">
 
 ## Properties
 
