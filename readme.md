@@ -51,7 +51,7 @@ This package complies with the specifications described in [AIP-13](https://gith
 | Attribute | Description | Type | Required |
 | --- | --- | --- | --- |
 | address | Phantom recipient address encoded in Base58. | String | Yes |
-| amount | Amount in XPH (Ẕ) or DXPH (DẔ). | Number | No |
+| amount | Amount in XPH (ⓟ) or DXPH (Dⓟ). | Number | No |
 | label | Recipient label string. | String | No |
 | size | Size of the QR code (pixels) | Number | No |
 | show-logo | Display the XPH logo in QR code | Boolean | No |
